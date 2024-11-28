@@ -1,6 +1,3 @@
-
-
-
 College Management Application
 This is a College Management Application designed for efficient handling of student and faculty information.
 
@@ -37,8 +34,25 @@ GET: Fetch user details.
 POST: Add new entries.
 PUT: Update existing records.
 DELETE: Remove records.
+Database Plan
+I initially planned the database and tables to manage data efficiently. Here’s the structure and functionality I envisioned:
+
+Tables:
+
+Student: Stores student information.
+Subject: Maintains a list of subjects offered.
+student_enrollment: Links students to subjects and their faculty.
+faculty: Contains faculty details.
+user_management: Manages user login and roles.
+Functionality:
+
+The data stored in these tables would be displayed in the UI.
+Users could perform CRUD operations via the UI, such as:
+Save new data into the database (e.g., adding a new student or subject).
+View all data dynamically on the frontend.
+Subject and faculty assignments would also be handled and saved in the database for viewing and editing.
 Current Issue
-There is an issue with connecting the Django backend to the PostgreSQL database. The database settings in the settings.py file are as follows:
+Due to a backend error, I couldn’t fully implement this plan. The issue lies in connecting the Django application to the PostgreSQL database. The database settings in the settings.py file are as follows:
 
 python
 
@@ -52,9 +66,9 @@ DATABASES = {
         'PORT': '5432', 
    } 
 }
-Despite the configuration, an error occurs while connecting to the database.
+Despite configuring the database, the connection isn’t working as expected.
 
-Database Structure
+Database Details
 The database is built in PostgreSQL with the following details:
 
 Database Name: University
@@ -64,4 +78,10 @@ Subject
 student_enrollment
 faculty
 user_management
-All tables have been created successfully.
+The tables have been created successfully, but the data couldn’t be integrated fully due to the backend issue mentioned above.
+
+Status
+The project is almost complete, with most functionalities implemented. The pending issues are:
+
+Fixing the database connection error.
+Conducting thorough testing to ensure smooth operation.
